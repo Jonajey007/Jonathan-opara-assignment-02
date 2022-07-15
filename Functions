@@ -1,0 +1,78 @@
+function logTwoNumbers() {
+  let num1 = 2;
+  let num2 = 6;
+  console.log(num1, num2);
+}
+logTwoNumbers();
+
+function addTwoNumbers() {
+  let num1 = 2;
+  let num2 = 6;
+  let sum = num1 + num2;
+  console.log(sum);
+}
+addTwoNumbers();
+
+// with one parameter
+function addParamToNumber(num) {
+  // create a random number
+  let randomNumber = 89;
+  let sum = num + randomNumber;
+  console.log(sum);
+}
+addParamToNumber(100);
+
+// with two parameters
+function addTwoParams(num1, num2) {
+  let sum = num1 + num2;
+  console.log("sum ==", sum);
+}
+addTwoParams(7, 8);
+
+function addFirstIndexToParams(arrayOfNumbers, num) {
+  let sum = arrayOfNumbers[0] + num;
+  console.log("array sum", sum);
+}
+let numbers = [3, 4, 5, 6, 7, 8, 9];
+addFirstIndexToParams(numbers, 22);
+
+function sumOfArrays(arrayOfNumbers) {
+  let sum = 0;
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    const currentNumber = arrayOfNumbers[i];
+    sum = sum + currentNumber;
+  }
+  console.log("sum of numbers", sum);
+}
+sumOfArrays(numbers);
+
+function countEvenNumbers(arrayOfNumbers) {
+  let evenNumbers = [];
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    if (arrayOfNumbers[i] % 2 == 0) {
+      evenNumbers.push(arrayOfNumbers[i]);
+    }
+  }
+  console.log("evenNumbers count", evenNumbers.length);
+  return evenNumbers.length;
+}
+countEvenNumbers(numbers);
+
+function convertCelciusToFahrenheit(arrayOfNumbers) {
+  // initiate an empty array
+  const fahrenheitNums = [];
+  // loop through the array
+  for (let i = 0; i < arrayOfNumbers.length; i++) {
+    const number = arrayOfNumbers[i];
+    // convert number(in celcius) to fahrenheit
+    const convertedNumber = number * (9 / 5) + 32;
+
+    // convert number to a whole number
+    fahrenheitNums.push(Math.trunc(convertedNumber));
+  }
+  return fahrenheitNums;
+}
+console.log(
+  "convert celcius to fahrenheit",
+  convertCelciusToFahrenheit([24, 16, 32, 2, 6])
+);
